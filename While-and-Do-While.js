@@ -5,16 +5,14 @@ https://www.youtube.com/watch?v=v9zgD8wjtbw&list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_Nd
 */
 
 //While, Do While - they both allow you to repeat code
-
-//while loop specifies a statement, as long as the test condition evaluste to true
+//while loop specifies a statement, as long as the test condition evaluate to true
 var n = 0;
 
 while (n < 5) {
   n++;
 
   if(n === 3) continue;  //continue command: will run before 3 but once the iteration lands on 3 it will stop and continue to the next. hence why '3' is missing
-//   if(n === 3) break;    // Break will discountinue once the iteration lands on '3' - " 1, 2 "
-
+//if(n === 3) break;    // Break will discountinue once the iteration lands on '3' - " 1, 2 "
   console.log(n);
 }
 

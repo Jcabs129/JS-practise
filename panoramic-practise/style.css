@@ -1,0 +1,11 @@
+.panorama{
+  height: auto;
+  max-width: auto;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  img {
+    height: auto%;
+
+  }
+}
