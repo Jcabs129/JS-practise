@@ -12,31 +12,38 @@
 
 
     <body>
+  <div class="paver--init paver--ready">
+        <!-- panorama metadata -->
+        <div class="paver__meta"
+              <span class="paver__title">Title</span>
+              <span class="paver__desc">Description</span>
+        </div>
 
+        <!-- Panorama as a background image -->
+        <div class ="paver__pano"></div>
 
-    <div class="panorama"> <img src="/Users/JamesCabeso/Documents/JS-practise/panoramic-practise/images/dubrovnik.JPG" width="900" alt="" title="dubrovnik"></div>
+        <!-- Panorama as background image -->
+        <div class="paver__scroller">
+            <span></span>
+        </div>
+  </div>
 
+  <div class="panorama"> <img src="/Users/JamesCabeso/Documents/JS-practise/panoramic-practise/images/dubrovnik.JPG" width="900" alt="" title="dubrovnik"></div>
 
-    <div class="paver--init paver--ready">
-      <!-- panorama metadata -->
-      <div class="paver__meta"
-            <span class="paver__title">Title</span>
-            <span class="paver__desc">Description</span>
-      </div>
+  <img src="/Users/JamesCabeso/Documents/JS-practise/panoramic-practise/images/wink.jpg" width="300"
+  onmouseover="this.src='/Users/JamesCabeso/Documents/JS-practise/panoramic-practise/images/wink-kiss.jpg'" width="300"
+  onmouseout="this.src='/Users/JamesCabeso/Documents/JS-practise/panoramic-practise/images/wink.jpg'" width="300"/>
 
-      <!-- Panorama as a background image -->
-      <div class ="paver__pano"></div>
-
-      <!-- Panorama as background image -->
-      <div class="paver__scroller">
-          <span></span>
-      </div>
-</div>
 </body>
 
-<div>
 
 
+<!--
+Material
+- https://www.w3schools.com/html/html5_video.asp
+- https://www.w3schools.com/html/html_youtube.asp
+ -->
+ <div>
 <video width="320" height="240" controls>
   <source src="/Users/JamesCabeso/Documents/JS-practise/panoramic-practise/images/Dubrvnik-vid1.MOV">
 </video>
