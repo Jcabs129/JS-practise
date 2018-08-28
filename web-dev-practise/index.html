@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="Web Dev - ideas">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <img id="rapper" src="/Users/JamesCabeso/Documents/JS-practise/web-dev-practise/images/malone.jpg"  width="300" height= "300">
+  <audio id="rap" src="/Users/JamesCabeso/Documents/JS-practise/web-dev-practise/music-file/malone.wav"></audio>
+
+  <img id="rapper2" src="/Users/JamesCabeso/Documents/JS-practise/web-dev-practise/images/drake.jpg"  width="300" height= "300">
+  <audio id="rap2" src="/Users/JamesCabeso/Documents/JS-practise/web-dev-practise/music-file/drake.wav"></audio>
+
+<script>
+
+//material - https://stackoverflow.com/questions/42855542/play-an-audio-file-when-click-is-inside-image-and-a-different-audio-file-when-cl?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+/* function play(){
+  var audio = document.getElementById("rap");
+  audio.play();
+}
+*/
+
+var audio = document.getElementById('rap');
+var img = document.getElementById('rapper');
+
+
+//material - https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/suspend
+document.addEventListener("click", async function(e){
+  if(audio.state === 'running'){
+    await audio.suspend();
+  }
+  if(e.target === img){
+    audio.src = "/Users/JamesCabeso/Documents/JS-practise/web-dev-practise/music-file/malone.wav";
+  }else {
+    audio.src = "/Users/JamesCabeso/Documents/JS-practise/web-dev-practise/music-file/drake.wav"
+  }if(audio.state === 'suspended'){
+    await audio.resume();
+  }else{
+    await audio.play()
+  }
+
+  console.log("e.target",e.target);
+
+})
+//  }
+
+
+</script>
+
+</body>
+</html>
